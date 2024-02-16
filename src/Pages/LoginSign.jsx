@@ -20,7 +20,7 @@ const LoginSignup = () =>{
         
         console.log('login function exicuted',formData)
         let responseData;
-        await fetch('http://127.0.0.1:4000/login',{
+        await fetch('http://13.60.35.148:4000/login',{
             method:'POST',
             headers:{
                 Accept:'application/json',
@@ -43,7 +43,7 @@ const LoginSignup = () =>{
         
         console.log('signup function exicuted',formData)
         let responseData;
-        await fetch('http://localhost:4000/signup',{
+        await fetch('http://13.60.35.148:4000/signup',{
             method:'POST',
             headers:{
                 Accept:'application/json',

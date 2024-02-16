@@ -7,7 +7,7 @@ import { useEffect } from "react";
 const NewCollection = () =>{
     const [new_collection, setNew_collection] = useState([]);
     useEffect(()=>{
-        fetch('http://127.0.0.1:4000/newcollections')
+        fetch('http://13.60.35.148:4000/newcollections')
         .then((resp)=>resp.json())
         .then((data)=>setNew_collection(data));
     },[])

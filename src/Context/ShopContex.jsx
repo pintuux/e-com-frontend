@@ -16,11 +16,11 @@ const ShopContextProvider = (props) =>{
     const [cartItems, setCartItems] = useState(getDefaultCart());
     const [all_product,setAll_product] = useState([]);
     useEffect(()=>{
-        fetch('http://127.0.0.1:4000/allproducts')
+        fetch('http://13.60.35.148:4000/allproducts')
         .then((resp)=>resp.json())
         .then((data)=>setAll_product(data))
     if(localStorage.getItem('auth-token')){
-        fetch('http://127.0.0.1:4000/getcart',{
+        fetch('http://13.60.35.148:4000/getcart',{
             method:'POST',
             headers:{
                 Accept:'application/form-data',
@@ -38,7 +38,7 @@ const ShopContextProvider = (props) =>{
     const addToCart = (itemId)=>{
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]+1}))
        if(localStorage.getItem('auth-token')){
-        fetch('http://127.0.0.1:4000/addtocart',{
+        fetch('http://13.60.35.148:4000/addtocart',{
             method:"POST",
             headers:{
                 Accept:'application/form-data',
@@ -56,7 +56,7 @@ const ShopContextProvider = (props) =>{
     const removeFromCart = (itemId)=>{
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]-1}))
         if(localStorage.getItem('auth-token')){
-            fetch('http://127.0.0.1:4000/removefromcart',{
+            fetch('http://13.60.35.148:4000/removefromcart',{
             method:"POST",
             headers:{
                 Accept:'application/form-data',

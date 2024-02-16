@@ -6,7 +6,7 @@ import { useEffect } from "react";
 const Popular = ()=>{
     const [popularProduct,setPopularProduct] = useState([]);
     useEffect(()=>{
-        fetch('http://127.0.0.1:4000/popularinwomen')
+        fetch('http://13.60.35.148:4000/popularinwomen')
         .then((resp)=>resp.json())
         .then((data)=>setPopularProduct(data))
     },[])
